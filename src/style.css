@@ -1,0 +1,67 @@
+:root {
+  --white: #ffffff;
+  --primary: #203040;
+  --hover: #f08040;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+}
+
+body {
+  height: 100vh;
+  font: 1.6rem Helvetica, Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  padding: 0.5rem;
+  background-color: var(--primary);
+}
+
+header a {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--hover);
+}
+
+main {
+}
+
+.brand a {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--primary);
+}
