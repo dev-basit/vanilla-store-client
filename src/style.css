@@ -1,7 +1,10 @@
 :root {
   --white: #ffffff;
+  --black: #000000;
   --primary: #203040;
   --hover: #f08040;
+  --white1: #e0e0e0;
+  --gray: #808080;
 }
 
 * {
@@ -19,10 +22,20 @@ body {
   padding: 0;
 }
 
+/* Utils */
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
+    "navbar"
     "main"
     "footer";
   grid-template-columns: 1fr;
@@ -31,7 +44,7 @@ body {
 }
 
 header {
-  grid-area: header;
+  grid-area: navbar;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +69,53 @@ main {
 .brand a {
   font-size: 3rem;
   font-style: italic;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.products li {
+  flex: 0 1 30rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  height: 42rem;
+  border-top: 0.2rem var(--white1) solid;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.product img {
+  max-height: 26rem;
+  max-width: 22rem;
+  margin-top: 2rem;
+}
+
+.product-name {
+  line-height: 2.2rem;
+}
+
+.product-brand {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.product-price {
+  font-size: 2rem;
+}
+
+.product-price span {
+  font-size: 1.2rem;
 }
 
 footer {
