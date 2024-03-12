@@ -11,3 +11,5 @@ dist
 .env.*
 
 package-lock.json
+
+readme.txt
